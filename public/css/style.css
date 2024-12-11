@@ -1,0 +1,178 @@
+/* estilos comunes */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+/*
+color primario (principal): #86BBBD
+color contraste/fondos: #6A6B83
+color claro para texto: #5F506B
+color botones: #533747
+color secundario: #76949F
+
+*/
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Figtree", sans-serif;
+    font-size: 16px;
+}
+img{
+    border-radius: 10px;
+}
+ /* estilos header */
+ header{
+    padding: 60px;
+    text-align: center;
+    background-image: url("../img/fondo6.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*se probo varias maneras para dejar centrado la img*/
+    }
+ header div {
+    padding: 10px;
+    border-radius: 10px;
+    background-color:rgba(0,0,0,0.4);
+    color:#86BBBD;
+    font-size: 1.1rem;
+}
+@media (max-width:900px) {
+    header{
+        background-position: center;
+    }
+    .navbar{
+        flex-direction: column;
+        position: unset;
+    }
+    .principal{
+        flex-direction: column;
+    }
+}
+.navbar{
+    display: flex;
+    justify-content: center;
+    background-color: #533747;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.navbar a {
+    color: #86BBBD;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: 800;
+}
+.navbar a:hover{
+    background-color: #86BBBD;
+    color: #533747;
+}
+/*estilos principal/cuerpo*/
+.principal{
+    display: flex;
+    flex-wrap: wrap;
+}
+aside{
+    flex-basis: 25%;
+    background-color: #5F506B;
+    text-align: center;
+    padding: 10px;
+}
+.AsideCasas{
+    text-decoration: underline;
+    font-weight: 700;
+}
+.image img {
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+    transition: 0.5s all ease-in-out;
+}
+.image:hover img{
+    transform: scale(1.06);
+}
+/*estilos main*/
+main{
+    flex-basis: 75%;
+    background-color: #76949F;
+    padding: 20px;
+}
+main h2{
+    margin-top: 10px;
+    color: #533747;
+}
+main p {
+    font-style: italic;
+}
+main img {
+    width: 100%;
+}
+.ver-mas {
+    background-color: #533747;
+    color: #86BBBD;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+.ver-mas:hover{
+    background-color: #6A6B83;
+    color: #533747;
+}
+/*estilos footer*/
+footer{
+    padding: 15px;
+    /*border-radius: 10px;*/
+    text-align: center;
+    background-color: black;
+    color: #86BBBD;
+}
+ /*estilos para el formulario*/
+ form{
+    padding: 40px;
+    background-color: #86BBBD;
+    text-align: center;
+}       
+fieldset{
+    display: grid;
+    grid-template-columns: 30vw 20vw;
+    gap: 20px;
+    margin: auto;
+    width: fit-content;
+    font-size: 1.2rem;
+    border: #533747 5px solid;
+    border-radius: 10px;
+}    
+label{
+    background-color: #533747;
+    color: #86BBBD;
+    padding: 10px;
+    border-radius: 10px;
+}
+@media (max-width:900px) {
+    fieldset{
+        display: flex;
+        flex-direction: column;
+    }
+}
+/*las @media las tenia todas en una, pero la del formulario tube que poner aparte porque sino no me funcionaba el codigo*/
+/*.Lacarra{
+    flex-basis: 50%;
+}*/
+/*estilos carrusel de bootstrap y de los archivos que estan dentro de archivo casas.html*/
+.carousel-control-next{
+    width: 162%;
+}
+.card-text{
+    font-style: italic;
+}
+.foto{
+        width: 25%;
+        height: auto;
+        object-fit: cover;
+    }
+.foto1{
+        display: flex;
+        flex-direction: row;
+        width: 25%;
+        height: auto;
+        object-fit: cover;
+}
